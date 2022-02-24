@@ -1,19 +1,15 @@
 ---
 framework: jest
-licenseTier: xsmall
-postMerge:
-  pattern:
-    - './test/integration/create-react-app/index.test.js'
-  strategy:
-    threshold: <5|100s|30m|6h>
-    type: <commit|time>
-preMerge:
-  pattern:
-    - './test/integration/create-react-app/index.test.js'
 preRun:
   command:
     - npm install
+preMerge:
+  pattern:
+    - './test/integration/create-react-app/index.test.js'
+postMerge:
+  pattern:
+    - './test/integration/create-react-app/index.test.js'
 postRun:
   command:
     - node --version
-version: 2.2
+version: 1.0
